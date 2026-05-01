@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-white dark:bg-brand-green text-brand-green dark:text-brand-cream transition-colors duration-500;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: none; 
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #FF6B35;
+  text-decoration: inherit;
+  cursor: none;
+}
+a:hover {
+  color: #F77F00;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/5 shadow-lg;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #D4AF37, #F77F00, #FF6B35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::selection {
+  background: #FF6B35;
+  color: white;
+}
